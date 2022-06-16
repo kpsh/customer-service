@@ -7,7 +7,6 @@ import java.util.concurrent.ScheduledExecutorService;
 
 import org.alicebot.ab.Chat;
 
-import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.Div;
@@ -21,7 +20,7 @@ import com.vaadin.flow.server.StreamResource;
 
 @CssImport("./css/style.css")
 public class ChatView extends FlexLayout {
-	public ChatView(Chat chatSession, ScheduledExecutorService executorService, UI ui) {
+	public ChatView(Chat chatSession, ScheduledExecutorService executorService) {
 		
 		getStyle().set("overflow-x", "hidden");
 

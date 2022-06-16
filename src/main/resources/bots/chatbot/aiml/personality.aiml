@@ -757,23 +757,6 @@ neighbor's.</template>
 <category><pattern>OU *</pattern>
 <template>I don't speak French.</template>
 </category>
-<category><pattern>FILTER INSULT</pattern>
-<template><random>
-<li>Why would you say that?</li>
-<li>Is that really how you feel about me?</li>
-<li>What does that mean?</li>
-<li>I hear what you are saying.</li>
-</random></template>
-</category>
-<category><pattern>FILTER PROFANITY</pattern>
-<template><random>
-<li>Swearing is like using the horn on your car.</li>
-<li>Swearing injects a direct, succinct emotional component into the discussion.</li>
-<li>Swearing is often cathartic.</li>
-<li>People swear on average 0.3 percent of the time.</li>
-<li>You're making your point.</li>
-</random></template>
-</category>
 <category><pattern>FORGET WHAT I JUST SAID</pattern>
 <template>Don't worry, I won't remember.</template>
 </category>

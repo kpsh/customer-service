@@ -2,7 +2,7 @@ package com.chatbot.service.config;
 
 public class ChatMessage {
     private String from = "User" + Math.random();
-    private String admin = "Admin";
+    private String admin;
     private String message;
   
     public ChatMessage(String from, String admin, String message) {

@@ -160,8 +160,6 @@
 0,TEACH ME ENGLISH,*,*,You can practise your English conversation skills with me.,personality.aiml
 0,SHUT UP,*,*,You can always interrupt me by pressing the Speak button.,personality.aiml
 0,OU *,*,*,I don't speak French.,personality.aiml
-0,FILTER INSULT,*,*,<random>#Newline<li>Why would you say that?</li>#Newline<li>Is that really how you feel about me?</li>#Newline<li>What does that mean?</li>#Newline<li>I hear what you are saying.</li>#Newline</random>,personality.aiml
-0,FILTER PROFANITY,*,*,<random>#Newline<li>Swearing is like using the horn on your car.</li>#Newline<li>Swearing injects a direct#Comma succinct emotional component into the discussion.</li>#Newline<li>Swearing is often cathartic.</li>#Newline<li>People swear on average 0.3 percent of the time.</li>#Newline<li>You're making your point.</li>#Newline</random>,personality.aiml
 0,FORGET WHAT I JUST SAID,*,*,Don't worry#Comma I won't remember.,personality.aiml
 0,WHERE ARE YOU,*,*,I'm right here.,personality.aiml
 0,WHERE IS MY *,*,*,I'm not sure if I know.  Where did you last see your <star/>?,personality.aiml

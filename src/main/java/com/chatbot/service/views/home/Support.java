@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.chatbot.service.config.ChatMessage;
-import com.vaadin.flow.component.AttachEvent;
-import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.messages.MessageInput;
 import com.vaadin.flow.component.messages.MessageList;
 import com.vaadin.flow.component.messages.MessageListItem;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
@@ -26,11 +26,16 @@ public class Support extends VerticalLayout {
     public Support(UnicastProcessor<ChatMessage> publisher, Flux<ChatMessage> messages) {
         this.setSizeFull();
 
-        Div div = new Div();
-        div.setWidth("100%");
-        div.setHeight("10vh");
+        HorizontalLayout header = new HorizontalLayout();
+        header.setWidth("100%");
+        header.setHeight("10vh");
 
         H3 title = new H3("Customer Support");
+
+        Button goBack = new Button("Go Back");
+        goBack.addClickListener(listener -> getUI().ifPresent(ui -> ui.navigate("")));
+
+        header.add(title, goBack);
 
         MessageList messageList = new MessageList();
         messageList.setWidth("100%");
@@ -56,14 +61,6 @@ public class Support extends VerticalLayout {
             items.add(send);
             messageList.setItems(items);
         });
-
-        div.add(title);
-        add(div, messageList, messageInput);
-    }
-
-    // refresh automatically the chat window
-    @Override
-    protected void onAttach(AttachEvent attachEvent) {
-        attachEvent.getUI().getPage().executeJavaScript("setInterval(function() { window.location.reload(); }, 20000);");
+        add(header, messageList, messageInput);
     }
 }
